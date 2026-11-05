@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './Home.css';
+import './Index.css';
 
-const Home = () => {
+const Index = () => {
   return (
     <Card className="dark-card text-center p-4">
       <Card.Body>
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Index;

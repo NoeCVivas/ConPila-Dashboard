@@ -24,17 +24,11 @@ export default function Navbar() {
           onHide={() => setShow(false)}
           className="custom-offcanvas"
         >
+          
           <Offcanvas.Body>
             <Nav className="ms-auto">
               {links.map(({ to, label, end }) => (
-                <Nav.Link
-                  key={to}
-                  as={NavLink}
-                  to={to}
-                  end={end}
-                  className="nav-link-custom"
-                  onClick={() => setShow(false)}
-                >
+                <Nav.Link key={to} as={NavLink} to={to} end={end} className="nav-link-custom" onClick={() => setShow(false)}>
                   {label}
                 </Nav.Link>
               ))}
