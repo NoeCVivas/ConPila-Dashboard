@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Card } from 'react-bootstrap';
-import CharacterTable from '../CharacterTable/CharacterTable'; // Asumiendo que los guardaste en Components/UI
+import CharacterTable from '../CharacterTable/CharacterTable';
 import Pagination from '../Pagination/Pagination';
 import './Users.css';
 
