@@ -12,18 +12,45 @@ export default function CharacterTable({ characters }) {
           <th>Avatar</th>
         </tr>
       </thead>
+
       <tbody>
-        {characters.map(c => (
-          <tr key={c.id}>
-            <td><span className="id-badge">{c.id}</span></td>
-            <td className="user-name">{c.name}</td>
-            <td>{c.species}</td>
+        {characters.map(character => (
+          <tr key={character.id}>
             <td>
-              <Badge bg={c.status === 'Alive' ? 'success' : c.status === 'Dead' ? 'danger' : 'secondary'}>
-                {c.status}
+              <span className="id-badge">
+                {character.id}
+              </span>
+            </td>
+
+            <td className="user-name">
+              {character.name}
+            </td>
+
+            <td>
+              {character.species}
+            </td>
+
+            <td>
+              <Badge
+                bg={
+                  character.status === 'Alive'
+                    ? 'success'
+                    : character.status === 'Dead'
+                      ? 'danger'
+                      : 'secondary'
+                }
+              >
+                {character.status}
               </Badge>
             </td>
-            <td><img src={c.image} alt={c.name} className="avatar-img" /></td>
+
+            <td>
+              <img
+                src={character.image}
+                alt={character.name}
+                className="avatar-img"
+              />
+            </td>
           </tr>
         ))}
       </tbody>

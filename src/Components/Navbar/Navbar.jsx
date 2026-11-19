@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Navbar as BsNavbar, Nav, Offcanvas, Container } from 'react-bootstrap';
+import {
+  Navbar as BsNavbar,Nav,Offcanvas,Container
+} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
@@ -14,9 +16,14 @@ export default function Navbar() {
   return (
     <BsNavbar expand="sm" className="custom-navbar sticky-top">
       <Container fluid className="px-4">
-        <span className="navbar-brand mb-0">Dashboard - ConPila</span>
+        <span className="navbar-brand mb-0">
+          Dashboard - ConPila
+        </span>
 
-        <BsNavbar.Toggle className="custom-toggler" onClick={() => setShow(true)} />
+        <BsNavbar.Toggle
+          className="custom-toggler"
+          onClick={() => setShow(true)}
+        />
 
         <BsNavbar.Offcanvas
           placement="end"
@@ -24,11 +31,17 @@ export default function Navbar() {
           onHide={() => setShow(false)}
           className="custom-offcanvas"
         >
-          
           <Offcanvas.Body>
             <Nav className="ms-auto">
               {links.map(({ to, label, end }) => (
-                <Nav.Link key={to} as={NavLink} to={to} end={end} className="nav-link-custom" onClick={() => setShow(false)}>
+                <Nav.Link
+                  key={to}
+                  as={NavLink}
+                  to={to}
+                  end={end}
+                  className="nav-link-custom"
+                  onClick={() => setShow(false)}
+                >
                   {label}
                 </Nav.Link>
               ))}
